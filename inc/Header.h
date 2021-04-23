@@ -3,5 +3,5 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
-
+void switchon(void);
 #endif
