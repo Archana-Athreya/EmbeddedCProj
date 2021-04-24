@@ -1,8 +1,8 @@
 # Embedded Project
 ## Activity 1
-|Build|Cppcheck|
-|:--:|:--:|
-|[![Compile-Linux](https://github.com/Archana-Athreya/EmbeddedCProj/actions/workflows/compile.yml/badge.svg)](https://github.com/Archana-Athreya/EmbeddedCProj/actions/workflows/compile.yml)|[![Cppcheck](https://github.com/Archana-Athreya/EmbeddedCProj/actions/workflows/code.yml/badge.svg)](https://github.com/Archana-Athreya/EmbeddedCProj/actions/workflows/code.yml)|
+|Build|Cppcheck|Codacy
+|:--:|:--:|:--:|
+|[![Compile-Linux](https://github.com/Archana-Athreya/EmbeddedCProj/actions/workflows/compile.yml/badge.svg)](https://github.com/Archana-Athreya/EmbeddedCProj/actions/workflows/compile.yml)|[![Cppcheck](https://github.com/Archana-Athreya/EmbeddedCProj/actions/workflows/code.yml/badge.svg)](https://github.com/Archana-Athreya/EmbeddedCProj/actions/workflows/code.yml)|[![Codacy Badge](https://app.codacy.com/project/badge/Grade/453f1a52320247dcacec886673b9b702)](https://www.codacy.com/gh/Archana-Athreya/EmbeddedCProj/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Archana-Athreya/EmbeddedCProj&amp;utm_campaign=Badge_Grade)|
 
 If Person is sitting on the seat and has turned ON the heater, then LED will glow indicating it. Otherwise LED will be OFF. Two inputs are taken through switches, LED will be ON only if two switches are closed(pressed).
 ### ON
