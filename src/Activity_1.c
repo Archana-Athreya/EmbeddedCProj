@@ -58,6 +58,7 @@ void LED_actuatorstatus(void)
 
         }
         else
-			Change_LED_State(LED_OFF);
+			
+		Change_LED_State(LED_OFF);
     }
 }
