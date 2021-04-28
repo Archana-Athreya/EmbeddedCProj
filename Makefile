@@ -1,29 +1,35 @@
-PROJ_NAME = Blink
-
+PROJ_NAME = Embeddedc_Activity
+ELFFILE = $(PROJ_NAME).elf
 BUILD_DIR = Build
 
 # All Source code files
 SRC = main.c\
-src/fuse.c
+src/Activity_1.c\
+src/Activity_2.c\
+src/Activity_3.c
 
 # All header file paths
 INC = -I inc
 
 # Find out the OS and configure the variables accordingly
 ifdef OS	# All configurations for Windwos OS
-# Correct the path based on OS
+   # Delete command 
+   RM = rm -rf
+   # Correct the path based on OS
    FixPath = $(subst /,\,$1)
-# Name of the compiler used
+   # Name of the compiler used
    CC = avr-gcc.exe
-# Name of the elf to hex file converter used
-   AVR_OBJ_CPY = avr-objcopy.exe
+   # Name of the elf to hex file converter used
+   AVR_OBJ_CPY = avr-objcopy
 else #All configurations for Linux OS
    ifeq ($(shell uname), Linux)
-# Correct the path based on OS
+   	  # Delete command
+      RM = rm -rf			
+	  # Correct the path based on OS
       FixPath = $1				
-# Name of the compiler used
+	  # Name of the compiler used
 	  CC = avr-gcc
-# Name of the elf to hex file converter used
+	  # Name of the elf to hex file converter used
 	  AVR_OBJ_CPY = avr-objcopy 
    endif
 endif
@@ -32,26 +38,21 @@ endif
 .PHONY:all analysis clean doc
 
 all:$(BUILD_DIR)
-# Compile the code and generate the ELF file
 	$(CC) -g -Wall -Os -mmcu=atmega328  $(INC) $(SRC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).elf)
-# To Create Hex file for SimullIDE
-hex: $(BUILD_DIR)
-
-	objcopy -O ihex $(BUILD_DIR)/$(PROJ_NAME).elf output.hex
-
-$(BUILD_DIR):
+	
 # Create directory to store the built files
+$(BUILD_DIR):
 	mkdir $(BUILD_DIR)
-
+# To generate hexfile from elf file
+hex:
+	$(AVR_OBJ_CPY) -O ihex $(BUILD_DIR)/$(ELFFILE) $(BUILD_DIR)/$(PROJ_NAME).hex
+# To do static analysis
 analysis: $(SRC)
-# Analyse the code using Cppcheck command line utility
 	cppcheck --enable=all $^
-
+#Build the code code documentation using Doxygen command line utility
 doc:
-# Build the code code documentation using Doxygen command line utility
 	make -C documentation
 
 clean:
-# Remove all the build files and generated document files
-	rm -rf $(call FixPath,$(BUILD_DIR)/*)
+	$(RM) $(call FixPath,$(BUILD_DIR))
 	make -C documentation clean
