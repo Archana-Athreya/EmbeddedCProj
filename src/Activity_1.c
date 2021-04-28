@@ -31,34 +31,33 @@ void init(void)
 {
 	/* Configure LED Pin */
 	SET_PORTB0;
-    SET_PORTD; 
-	SET_PD0_AND_PD1; 
-    buttonsensorinput();
-    heatersensorinput();
+        SET_PORTD; 
+	SET_PD0_AND_PD1; //For input
+        buttonsensorinput();
+       	heatersensorinput();
 }
 
 void LED_actuatorstatus(void)
 {   
     uint16_t temp=0, channel=0;
-	initADC();
+    initADC();
     initPWM();
 
     Change_LED_State(LED_OFF);
     while(1){
-        /*checks whether button sensor and heater is ON or OFF */
+        /*checks whether both button sensor and heater is ON or OFF */
         if((BUTTON_SENSOR_ON)&& (HEATER_SENSOR_ON))
-		
-		{
+	{
 
                 Change_LED_State(LED_ON);
-				//delayms(200);
+		//delayms(200);
                 temp = ReadADC(channel);
                 OCR1A = temp;
                 delayms(200);
 
         }
         else
-			
+		
 		Change_LED_State(LED_OFF);
     }
 }
