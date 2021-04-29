@@ -37,28 +37,28 @@ If Person is sitting on the seat and has turned ON the heater, then LED will glo
   <img width="600" height="500" src="https://github.com/Archana-Athreya/EmbeddedCProj/blob/5fb6e32c4a50a9aaa1b46addb16a3845b34347ba/simulation/act3_29.png">
 </p>
 
-###  For 33 degree celsius
+### For 33 degree celsius
 <p align="center">
   <img width="600" height="500" src="https://github.com/Archana-Athreya/EmbeddedCProj/blob/5fb6e32c4a50a9aaa1b46addb16a3845b34347ba/simulation/act3_33.png">
 </p>
 
 ## Activity 4
-### For 20 degree celsius
+### 1. For 20 degree celsius
 <p align="center">
   <img width="600" height="500" src="https://github.com/Archana-Athreya/EmbeddedCProj/blob/5fb6e32c4a50a9aaa1b46addb16a3845b34347ba/simulation/act4_20.png">
 </p>
 
-### For 25 degree celsius
+### 2. For 25 degree celsius
 <p align="center">
   <img width="600" height="500" src="https://github.com/Archana-Athreya/EmbeddedCProj/blob/5fb6e32c4a50a9aaa1b46addb16a3845b34347ba/simulation/act4_25.png">
 </p>
 
-### For 29 degree celsius
+### 3. For 29 degree celsius
 <p align="center">
   <img width="600" height="500" src="https://github.com/Archana-Athreya/EmbeddedCProj/blob/5fb6e32c4a50a9aaa1b46addb16a3845b34347ba/simulation/act4_29.png">
 </p>
 
-###  For 33 degree celsius
+### 4. For 33 degree celsius
 <p align="center">
   <img width="600" height="500" src="https://github.com/Archana-Athreya/EmbeddedCProj/blob/5fb6e32c4a50a9aaa1b46addb16a3845b34347ba/simulation/act4_33.png">
 </p>
