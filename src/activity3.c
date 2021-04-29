@@ -11,7 +11,7 @@ char pwmout(uint16_t temp)
 {
 	char temperature;
 
-    if((temp>=0) && (temp<=209))
+    if((temp<=209))
 	{
 
         OCR1A = 205; /*20% duty cycle*/
