@@ -39,8 +39,8 @@ void init(void)
 
 void LED_actuatorstatus(void)
 {   
-    uint16_t temp=0, channel=0;
-	initADC();
+    uint16_t temp, channel=0;
+    initADC();
     initPWM();
 
     Change_LED_State(LED_OFF);
@@ -51,9 +51,9 @@ void LED_actuatorstatus(void)
 		{
 
                 Change_LED_State(LED_ON);
-				//delayms(200);
+		//delayms(200);
                 temp = ReadADC(channel);
-				/*PWM*/
+		/*PWM*/
                 OCR1A = temp;
                 delayms(200);
 
