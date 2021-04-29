@@ -25,14 +25,14 @@ char pwmout(uint16_t temp)
         temperature = 25;
         _delay_ms(20);
     }
-    else if((temp>=510) && (temp<=709))
+    else if( (temp<=709) && (temp>=510))
 	{
 
         OCR1A = 717;/*70% duty cycle*/
         temperature = 29;
         _delay_ms(20);
     }
-    else if((temp>=710) && (temp<=1024))
+    else if((temp<=1024) && (temp>=710))
 	{
 
         OCR1A = 973; /*95% duty cycle*/
