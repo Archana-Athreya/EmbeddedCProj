@@ -30,8 +30,8 @@ void init(void)
 
 void LED_actuatorstatus(void)
 {   
-    uint16_t temp=0;
-	uint16_t tempdata=0,channel=0;
+    uint16_t temp;
+	uint16_t tempdata,channel=0;
 	/*Intialising PWM,ADC and USART*/
     initADC();
     initPWM();
